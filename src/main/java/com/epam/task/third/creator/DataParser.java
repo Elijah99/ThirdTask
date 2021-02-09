@@ -11,7 +11,7 @@ public class DataParser {
     public static final String DELIMITER_SPACE = " ";
     public static final String DELIMITER_COMMA = ",";
 
-    public Point parsePoint(String string){
+    public Point parsePoint(String string) {
         string = string.trim();
         String[] values = string.split(DELIMITER_SPACE);
 
@@ -22,10 +22,10 @@ public class DataParser {
         return new Point(x, y, z);
     }
 
-    public Cube parseCube(String string){
+    public Cube parseCube(String string) {
         String[] points = string.split(DELIMITER_COMMA);
         List<Point> pointList = new ArrayList<Point>();
-        for(int i = 0; i < points.length; i++){
+        for (int i = 0; i < points.length; i++) {
             Point point = parsePoint(points[i]);
             pointList.add(point);
         }

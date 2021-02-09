@@ -18,7 +18,7 @@ public class CubeValidator {
         pointLogic = new PointLogic();
     }
 
-    public boolean validateString(String string){
+    public boolean validateString(String string) {
         Pattern linePattern = Pattern.compile(CUBE_STRING_PATTERN);
         Matcher matcher = linePattern.matcher(string);
         return matcher.matches();
@@ -33,7 +33,7 @@ public class CubeValidator {
             return false;
         }
         int edgeLength = calculateCubeEdgeLength(points);
-        if(!isDistanceBetweenConnectedPointsEquals(points,edgeLength)){
+        if (!isDistanceBetweenConnectedPointsEquals(points, edgeLength)) {
             return false;
         }
 
@@ -75,14 +75,14 @@ public class CubeValidator {
         return true;
     }
 
-    private boolean isDistanceBetweenConnectedPointsEquals(List<Point> points, int expectedDistance){
-        for(int i = 0; i < points.size(); i++){
-            for(int j = 0; j< points.size(); j++){
+    private boolean isDistanceBetweenConnectedPointsEquals(List<Point> points, int expectedDistance) {
+        for (int i = 0; i < points.size(); i++) {
+            for (int j = 0; j < points.size(); j++) {
                 Point pointA = points.get(i);
                 Point pointB = points.get(j);
-                boolean isTwoCoordinatesOfPointEquals = pointLogic.isTwoCoordinatesOfPointEquals(pointA,pointB);
-                int currentDistance = pointLogic.calculateDistance(pointA,pointB);
-                if(i!=j && isTwoCoordinatesOfPointEquals && currentDistance != expectedDistance){
+                boolean isTwoCoordinatesOfPointEquals = pointLogic.isTwoCoordinatesOfPointEquals(pointA, pointB);
+                int currentDistance = pointLogic.calculateDistance(pointA, pointB);
+                if (i != j && isTwoCoordinatesOfPointEquals && currentDistance != expectedDistance) {
                     return false;
                 }
             }

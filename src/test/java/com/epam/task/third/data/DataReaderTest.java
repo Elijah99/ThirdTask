@@ -18,6 +18,6 @@ public class DataReaderTest {
         //when
         List<String> actual = dataReader.readData(FILENAME_VALID);
         //then
-        Assert.assertEquals(READ_DATA_VALID,actual);
+        Assert.assertEquals(READ_DATA_VALID, actual);
     }
 }

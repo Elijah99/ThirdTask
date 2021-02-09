@@ -11,7 +11,7 @@ public class Cube {
         this.points = points;
     }
 
-    public Cube(Point... points){
+    public Cube(Point... points) {
         this.points = Arrays.asList(points);
     }
 

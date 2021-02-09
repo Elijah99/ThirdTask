@@ -10,11 +10,11 @@ import java.util.List;
 
 public class CubeValidatorTest {
 
-    public static final List<Point> CUBE_LIST_POINTs_CORRECT = Arrays.asList(
+    public static final List<Point> CUBE_LIST_POINTS_CORRECT = Arrays.asList(
             new Point(0, 0, 0), new Point(0, 0, 2), new Point(0, 2, 0),
             new Point(0, 2, 2), new Point(2, 0, 0), new Point(2, 0, 2),
             new Point(2, 2, 0), new Point(2, 2, 2));
-    public static final Cube CUBE_CORRECT = new Cube(CUBE_LIST_POINTs_CORRECT);
+    public static final Cube CUBE_CORRECT = new Cube(CUBE_LIST_POINTS_CORRECT);
     public static final String STRING_WITH_CORRECT_DATA = "1 2 3,1 2 3,1 2 3,1 2 3,1 2 3,1 2 3,1 2 3,1 2 3";
 
     public static final List<Point> LIST_POINTS_OF_CUBE_INCORRECT = Arrays.asList(

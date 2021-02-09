@@ -17,9 +17,6 @@ public class CubeLogicTest {
     public static final Cube CUBE_CORRECT = new Cube(LIST_POINTS_OF_CUBE_CORRECT);
 
 
-
-
-
     @Test
     public void testCalculateSquareShouldCalculateSquareWhenCubeIsValid() {
         //given
@@ -59,7 +56,6 @@ public class CubeLogicTest {
         //then
         Assert.assertTrue(actual);
     }
-
 
 
 }
